@@ -1,4 +1,4 @@
-# Passo a passo
+# Ambiente de desenvolvimento Wordpress (Passo a passo)
 
 ## No terminal
 
