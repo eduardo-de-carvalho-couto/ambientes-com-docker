@@ -6,8 +6,8 @@ git clone https://github.com/eduardo-de-carvalho-couto/ambientes-com-docker
 ```
 ## No terminal, dentro do diretório.
 ```
-cp -R ambientes-com-docker/node/* .
+cp -R ambientes-com-docker/[imagem-escolhida]/* .
 ```
 ```
-rm -R ambientes-com-docker/
+rm -Rf ambientes-com-docker/
 ```
