@@ -8,10 +8,14 @@ $ docker run --rm -itv $(pwd):/app -w /app -u $(id -u):$(id -g) node npx create-
 $ docker run -itv $(pwd):/usr/src/app -u $(id -u):$(id -g) -p 3000:3000 --name meu-app node
 ```
 *Depois, em outro terminal, entre dentro do container, vá na pasta do app e coloque*
-npm start
+```sh
+$ npm start
+```
 	
 *Definindo um network específico*
-docker run -itv $(pwd):/usr/src/app -u $(id -u):$(id -g) -p 3000:3000 --name meu-app --network meu_network node
+```sh
+$ docker run -itv $(pwd):/usr/src/app -u $(id -u):$(id -g) -p 3000:3000 --name meu-app --network meu_network node
+```
 
 ```sh
 $ docker run --rm \
@@ -50,27 +54,27 @@ $ alias composer='docker run --rm -itv $(pwd):/app -w /app -u $(id -u):$(id -g) 
 ```
 
 ```sh
-docker-compose down --rmi all -v
-alias php8='docker run --rm -v $(pwd):/app php php'
-alias phpComposer='docker run --rm -v $(pwd):/app composer composer'
-alias composer='docker run --rm -u "$(id -u):$(id -g)" -v $(pwd):/var/www/html -w /var/www/html composer composer'
-alias php='docker run --rm -u "$(id -u):$(id -g)" -v $(pwd):/var/www/html -w /var/www/html php php'
-alias node='docker run --rm -itv $(pwd):/app -w /app -u $(id -u):$(id -g) node node'
+$ docker-compose down --rmi all -v
+$ alias php8='docker run --rm -v $(pwd):/app php php'
+$ alias phpComposer='docker run --rm -v $(pwd):/app composer composer'
+$ alias composer='docker run --rm -u "$(id -u):$(id -g)" -v $(pwd):/var/www/html -w /var/www/html composer composer'
+$ alias php='docker run --rm -u "$(id -u):$(id -g)" -v $(pwd):/var/www/html -w /var/www/html php php'
+$ alias node='docker run --rm -itv $(pwd):/app -w /app -u $(id -u):$(id -g) node node'
 ```
 
 ## COMANDO PARA TRABALHAR COM NODEJS
 ```
-docker run -itv $(pwd):/usr/src/app -u $(id -u):$(id -g) -p 3000:3000 edu/node
+$ docker run -itv $(pwd):/usr/src/app -u $(id -u):$(id -g) -p 3000:3000 edu/node
 ```
 
-### PARA TRABALHAR DENTRO DO CONTAINER
+### PARA ENTRAR DO CONTAINER
 ```
-docker exec -it [NOME] bash
+$ docker exec -it [NOME] bash
 ```
 
 ## NGINX
 
 ### Welcome do nginx
 ```sh
-docker run --name docker-nginx -p 80:80 nginx
+$ docker run --name docker-nginx -p 80:80 nginx
 ```
