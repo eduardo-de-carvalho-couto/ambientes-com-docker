@@ -67,7 +67,7 @@ $ alias node='docker run --rm -itv $(pwd):/app -w /app -u $(id -u):$(id -g) node
 $ docker run -itv $(pwd):/usr/src/app -u $(id -u):$(id -g) -p 3000:3000 edu/node
 ```
 
-### PARA ENTRAR DO CONTAINER
+## PARA ENTRAR DO CONTAINER
 ```
 $ docker exec -it [NOME] bash
 ```
