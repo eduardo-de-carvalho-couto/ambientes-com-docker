@@ -1,0 +1,46 @@
+version: '2'
+services:
+  app:
+    container_name: my-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    image: my-app
+    depends_on:
+      - db
+    links:
+      - db:db
+    environment:
+      PHP_ERROR_REPORTING: 'E_ALL & ~E_DEPRECATED & ~E_NOTICE'
+    expose:
+      - "80"
+    ports:
+      - "81:80"
+    volumes:
+      - .:/var/www/html
+    networks:
+            - adianti
+
+  db:
+    container_name: my-db
+    build:
+      context: app/database
+      dockerfile: Dockerfile
+    image: my-db
+    environment:
+      MYSQL_ROOT_PASSWORD: 'senha123'
+      MYSQL_DATABASE: 'my_app_db'
+    expose:
+      - "3306"
+    ports:
+      - "3306:3306"
+    volumes:
+     - ./app/database/*.sql:/docker-entrypoint-initdb.d
+    networks:
+            - adianti
+
+
+networks:
+    adianti:
+        driver: bridge
