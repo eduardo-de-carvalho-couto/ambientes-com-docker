@@ -11,8 +11,8 @@ docker-compose up -d
 docker-compose exec app bash
 ```
 ### 3. Execute o script
-```sh
-$ composer install
+```
+composer install
 ```
 ### 4. Saia do container
 ```
