@@ -18,3 +18,5 @@ composer install
 ```
 exit
 ```
+
+*Atenção ao arquivo '.gitignore', pois é possível que ele não esteja presente na raiz do seu projeto com adianti. Ao fazer um push para o seu projeto pessoal, certifique-se de ter o arquivo .gitignore na raiz do projeto com o '/vendor' no arquivo, como descrito no .gitignore desse subdiretório.*
