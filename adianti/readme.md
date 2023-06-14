@@ -14,7 +14,7 @@ docker-compose exec app bash
 ```sh
 $ composer install
 ```
-### 6. Saia do container
+### 4. Saia do container
 ```
 exit
 ```
