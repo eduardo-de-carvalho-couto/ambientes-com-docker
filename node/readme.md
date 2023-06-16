@@ -1,4 +1,4 @@
-# Ambiente de desenvolvimento Wordpress (passo a passo)
+# Ambiente de desenvolvimento Node (passo a passo)
 
 ## No terminal
 
