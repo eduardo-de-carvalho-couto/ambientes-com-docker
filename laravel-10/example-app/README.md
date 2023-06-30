@@ -1,5 +1,9 @@
 ## Passo a passo para utilizar esse ambiente Laravel
 
+```sh
+cd example-app/
+```
+
 Crie o Arquivo .env
 ```sh
 cp .env.example .env
