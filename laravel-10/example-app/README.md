@@ -60,6 +60,11 @@ Rode as migrations
 php artisan migrate
 ```
 
+Se der algum problema quando tentar rodar as migrations, tente isso e depois rode as migrations novamente
+```sh
+php artisan config:clear
+```
+
 
 Acesse o projeto
 [http://localhost:8989](http://localhost:8989)
